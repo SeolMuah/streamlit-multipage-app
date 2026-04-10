@@ -1,5 +1,25 @@
 # Streamlit 멀티페이지 앱 배포 실습
 
+## 파일 구조
+
+```
+streamlit-multipage-app/
+├── app.py                          # 진입점 (st.navigation)
+├── requirements.txt                # 패키지 목록
+├── .streamlit/
+│   ├── secrets.toml                # API 키 (gitignore 제외)
+│   └── secrets.example.toml        # API 키 템플릿
+├── data/
+│   └── california_housing.csv      # 주택 데이터
+├── model/
+│   └── iris_model.joblib           # 학습된 ML 모델
+└── pages/
+    ├── data_analysis.py            # 데이터 분석 (@st.fragment)
+    ├── visualization.py            # 시각화 (@st.fragment)
+    ├── ml_prediction.py            # 붓꽃 예측 (@st.fragment)
+    └── gemini_chatbot.py           # Gemini 챗봇 + YouTube 도구
+```
+
 ## 실행 방법
 
 ```bash
